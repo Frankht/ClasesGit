@@ -22,7 +22,10 @@ urlpatterns = [
     url(r'^Aldo-Rodriguez-Morales/$', views.AldoRodriguezMoralesView.as_view(), name='AldoRodriguez'),
     url(r'^Diego-Licea-Antonio/$', views.diego, name='front.diego'),
     url(r'^Efren-Pacheco-Sanchez/$', views.EfrenPachecoSanchez, name='front.EfrenPachecoSanchez'),
-
+    url(r'^Alejandro-Madariaga-Angeles/$',
+        views.AlejandroMadariagaAngelesView.as_view(),
+        name='AlejandroMadariagaAngeles'
+        ),
 ]
 
 if settings.DEBUG:

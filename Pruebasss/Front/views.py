@@ -1,8 +1,6 @@
 from django.shortcuts import render
-from Front.models import UsuariosUaq, ModelCruzEstefania
-
-from Front.models import UsuariosUaq
-from django.views.generic.base import TemplateView
+from django.views.generic.base import View, TemplateView
+from Front.models import UsuariosUaq, ModelCruzEstefania, Book, BookAuthor
 
 # Create your views here.
 
@@ -100,3 +98,34 @@ def EfrenPachecoSanchez(request):
     context['NoHope']=UsuariosUaq.objects.filter(dado_de_bajo=True)
 
     return render(request, 'Front/diego.html', context)
+
+
+class AlejandroMadariagaAngelesView(View):
+
+    def get(self, request):
+        booksPerAuthor = self.getBooksPerAuthor()
+        context = {
+            'booksPerAuthor': booksPerAuthor
+        }
+
+        return render(request, 'Front/alejandroMadariagaAngeles.html', context)
+
+    def getBooksPerAuthor(self):
+        authors = BookAuthor.objects.all()
+        books = Book.objects.all()
+
+        booksPerAuthor = []
+
+        for author in authors:
+            booksByAuthor = {
+                'author': author,
+                'books': []
+            }
+
+            for book in books:
+                if book.author == author:
+                    booksByAuthor['books'].append(book)
+
+            booksPerAuthor.append(booksByAuthor)
+
+        return booksPerAuthor
