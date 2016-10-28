@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #292c36;
+  color: #fff;
+  font-family: "Myriad Set Pro",
+    "Helvetica Neue", "Helvetica",
+    "Arial", "Verdana";
+  font-size: 14pt;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: sans-serif;
+}
+
+.container-content {
+  margin-top: 15px;
+}
+
+.panel-black {
+  background-color: #3a3d47;
+  border: solid 1px #7e7f8b;
+}
+  .panel-black .panel-heading {
+    background-color: #161822;
+    color: #fff;
+    border-bottom: solid 1px #7e7f8b;
+  }
+
+.margin-b {
+  margin-bottom: 15px;
+}

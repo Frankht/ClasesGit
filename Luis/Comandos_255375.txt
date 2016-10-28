@@ -1,0 +1,29 @@
+"Si alguien revisa este comentario y me lo informa tiene 3 puntos mas"
+Vi el comentario c:
+
+ULTIMO COMMIT
+381c6b7
+por: alejandroMA
+
+COMANDOS
+git init > Iniciar un repositorio
+git --version > Ver la versión de Git
+git diff --staged > Muestra la diferencia con los cambios en stagin area
+git reset –hard Head > Regresa y borra branches
+git log > Ver todos los cambios del archivo
+git config --global color.ui.auto > Poner con color la sintaxis
+git branch "Nombre_rama" > Crea una nueva rama
+git branch -d "Nombre_rama" > Elimina la rama
+git checkout "Nombre_rama" > Cargar una versión anterior
+git checkout HEAD > regresar a la última versión
+git checkout -b "Nombre_rama" > Crea una nueva rama y la carga
+git commit > sube los cambios
+git clone "Liga"> Clona un repositorio a la PC local
+git add >empezar el seguimiento de archivos nuevos
+git status >muestra todos los cambios desde el ultimo commit
+git log --graph --oneline --all>muestra todo los commit en árbol
+git pull > Actualizar la información local
+git push origin > Sube los cambios al servidor
+git push origin --delete "Nombre-rama" > Elimina la rama del servidor
+git merge "Nombre-rama" > fusiona la rama actual con la rama especificada
+
