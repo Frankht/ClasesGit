@@ -26,6 +26,11 @@ urlpatterns = [
         views.AlejandroMadariagaAngelesView.as_view(),
         name='AlejandroMadariagaAngeles'
         ),
+    url(r'^Abraham-Porter-Mastache/$',
+        views.AbrahamPorterMastache,
+        name='front.AbrahamPorterMastache'
+        ),
+    
 ]
 
 if settings.DEBUG:

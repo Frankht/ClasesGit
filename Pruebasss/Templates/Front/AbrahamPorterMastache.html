@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Abraham Porter Mastache</title>
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+</head>
+<body>
+
+
+	<div class="w3-center">
+  		<h2>Vista de Calificaciones por Abraham Porter</h2>
+
+  		<div>
+  		<!-- Promedio Mayor a 8 -->
+  			<div class="w3-card-4 w3-blue" style="padding-bottom: 10px;">
+  				<table class="w3-table">
+	  				
+					<tr class="w3-center"><h3>Usuarios Con promedio mayor a 8</h3></tr>
+					{% for usuario  in usersFuture %}
+	  				<tr class="w3-hover-lime w3-hover-text-grey">
+						<td>Nombre: {{usuario.nombre_usario}}</td>
+						<td>Promedio : {{usuario.promedio}}</td>
+					</tr>
+					{% endfor %}
+
+				</table>
+			</div>
+
+		<!-- Promedio menor a 8 -->
+			<div class="w3-card-4 w3-teal" style="padding-bottom: 10px;">
+  				<table class="w3-table">
+	  				
+					<tr class="w3-center"><h3>Usuarios Con promedio menor a 8</h3></tr>
+					{% for usuario  in usersNoFuture %}
+					<tr class="w3-hover-lime w3-hover-text-grey">
+						<td>Nombre: {{usuario.nombre_usario}}</td>
+						<td>Promedio : {{usuario.promedio}}</td>
+					</tr>
+					{% endfor %}
+
+				</table>
+			</div>
+
+		<!-- Usuarios dados de baja -->
+			<div class="w3-card-4 w3-orange" style="padding-bottom: 10px;">
+  				<table class="w3-table">
+	  				
+					<tr class="w3-center"><h3 class="w3-text-dark-grey">Usuarios dados de baja</h3></tr>
+					{% for usuario in NoHope %}
+					<tr class="w3-hover-lime w3-hover-text-grey">	
+						<td>Nombre: {{usuario.nombre_usario}}</td>
+						<td>De baja: {{usuario.dado_de_bajo}}</td>
+					</tr>
+					{% endfor %}
+
+				</table>
+			</div>
+
+
+			<div class="w3-card-4 w3-khaki" style="padding: 5px 0; margin-top: 10px;">
+				<p class="w3-large w3-text-dark-grey">Promedio General: {{PromedioGeneral}}</p>
+  			</div>
+
+  		</div>
+	</div>
+
+</body>
+</html>
