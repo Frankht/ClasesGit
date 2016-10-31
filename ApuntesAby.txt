@@ -1,0 +1,45 @@
+-Git Commands
+
+
+(Para espacios se pone "El\ Nepe\ de\ Jaga.jpg")
+----Checa Status
+$git status
+
+Checa Logs
+$git log
+
+----Agrega Archivos
+$git add .
+
+$git add "archivo"
+
+----Realiza un commit
+$git commit
+
+
+Checar que hay en la carpeta
+$ls
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  $git checkout -b <new-branch-name>
+
+
+Unir una branches
+$git merge master "Otra branch"
+
+$git clone
+
+$git log --graph --oneline --all
+
+$git log --graph --oneline master test2
+
+$git checkout master
+
+$git branch
+
+$git pull
+
+$git push
+
